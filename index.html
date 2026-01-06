@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SRJ Photography Patna | Luxury Wedding Films</title>
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#0b0b0b;
+      --gold:#c9a24d;
+      --soft-gold:#e7cf8a;
+      --white:#ffffff;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Manrope',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
+    h1,h2,h3{font-family:'Cinzel',serif;letter-spacing:1px}
+    a{text-decoration:none;color:inherit}
+
+    /* INTRO CINEMATIC */
+    .intro{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:9999}
+    .intro h1{color:var(--gold);font-size:64px;letter-spacing:6px;animation:logoReveal 2.5s ease forwards}
+    .intro p{color:#aaa;letter-spacing:5px;margin-top:14px;opacity:0;animation:fadeIn 1.8s ease forwards 1.4s}
+    @keyframes logoReveal{0%{opacity:0;transform:scale(.6)}100%{opacity:1;transform:scale(1)}}
+    @keyframes fadeIn{to{opacity:1}}
+
+    /* HEADER SLIDER */
+    header{height:100vh;position:relative;overflow:hidden}
+    .slides img{width:100%;height:100%;object-fit:cover;position:absolute;opacity:0}
+    .slides img:nth-child(1){animation:fade 18s infinite}
+    .slides img:nth-child(2){animation:fade 18s infinite 6s}
+    .slides img:nth-child(3){animation:fade 18s infinite 12s}
+    @keyframes fade{0%{opacity:0}10%{opacity:1}30%{opacity:1}40%{opacity:0}100%{opacity:0}}
+    header::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55)}
+
+    .hero{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;animation:heroUp .9s ease}
+    @keyframes heroUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+    .hero h1{font-size:64px;color:var(--gold)}
+    .hero p{margin-top:15px;font-size:18px;color:#ddd}
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float{position:fixed;bottom:26px;right:26px;background:#25D366;color:#fff;padding:16px 22px;border-radius:60px;font-weight:600;z-index:9999;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:pulse 2.2s infinite}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+
+    section{padding:120px 8%}
+    .section-title{text-align:center;margin-bottom:70px}
+    .section-title h2{color:var(--gold);font-size:42px}
+    .section-title p{color:#aaa;margin-top:10px}
+
+    .insta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+    .insta-grid iframe{width:100%;height:480px;border-radius:16px;border:1px solid rgba(201,162,77,.25);background:#000}
+
+    .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+    .review{background:#111;border:1px solid rgba(201,162,77,.25);padding:35px;border-radius:20px;transition:.4s}
+    .review:hover{transform:translateY(-8px)}
+    .review h3{color:var(--soft-gold);margin-bottom:10px}
+    .review p{color:#ccc;font-size:15px;line-height:1.7}
+
+    .video-box iframe{width:100%;height:520px;border-radius:22px;border:2px solid var(--gold)}
+
+    footer{background:#000;padding:120px 8% 60px;border-top:1px solid rgba(201,162,77,.25)}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:50px}
+    footer h3{color:var(--gold);margin-bottom:20px}
+    footer p,footer a{color:#aaa;font-size:14px;line-height:1.8}
+    .copyright{text-align:center;margin-top:60px;color:#666;font-size:13px}
+
+    /* MOBILE POLISH */
+    @media(max-width:768px){
+      .hero h1{font-size:44px}
+      .video-box iframe{height:320px}
+      .insta-grid iframe{height:380px}
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="intro" id="intro">
+  <h1>SRJ PHOTOGRAPHY</h1>
+  <p>BLISS · PURE MAGIC · TIMELESS WEDDINGS</p>
+</div>
+<script>
+  setTimeout(() => {
+    const intro = document.getElementById('intro');
+    intro.style.opacity = '0';
+    setTimeout(() => intro.style.display = 'none', 800);
+  }, 3000);
+</script>
+
+<header>
+  <div class="slides">
+    <!-- replace these with SRJ real wedding images anytime -->
+    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf" alt="Luxury Indian Wedding">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="Royal Wedding Couple">
+    <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172" alt="Cinematic Wedding Ritual">
+  </div>
+  <div class="hero">
+    <h1>SRJ Photography</h1>
+    <p>Cinematic Wedding Films · Patna · Destination Weddings</p>
+    <div style="margin-top:40px;display:flex;gap:25px;flex-wrap:wrap;justify-content:center">
+      <a href="https://wa.me/7488573305?text=Hi%20SRJ%20Photography%2C%20we%20want%20to%20RESERVE%20our%20wedding%20date." style="padding:18px 42px;border:2px solid var(--gold);border-radius:60px;color:var(--gold);font-family:'Cinzel',serif;letter-spacing:2px">RESERVE YOUR DATE</a>
+      <a href="#enquiry" style="padding:18px 42px;background:var(--gold);border-radius:60px;color:#000;font-family:'Cinzel',serif;letter-spacing:2px">ENQUIRY</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="section-title">
+    <h2>Our Signature Services</h2>
+    <p>crafted for couples who want nothing but the finest</p>
+  </div>
+  <div class="reviews">
+    <div class="review"><h3>Cinematic Wedding Films</h3><p>Luxury storytelling with dramatic visuals, emotional moments, slow-motion rituals and a movie-like narrative that feels timeless.</p></div>
+    <div class="review"><h3>Pre-Wedding Films</h3><p>Concept-based romantic films shot with elegance, travel aesthetics and cinematic lighting that reflects your love story.</p></div>
+    <div class="review"><h3>Destination Weddings</h3><p>Complete destination coverage with premium gear, creative direction and seamless coordination from start to finish.</p></div>
+    <div class="review"><h3>Wedding Photography</h3><p>Editorial-style frames, candid emotions and royal portraits crafted for albums that feel like luxury magazines.</p></div>
+    <div class="review"><h3>Traditional + Candid Coverage</h3><p>A perfect balance of rituals and raw emotions captured without interrupting your special moments.</p></div>
+    <div class="review"><h3>Premium Wedding Albums</h3><p>Custom-designed luxury albums with premium paper, elegant layouts and timeless finishing.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Instagram Highlights</h2>
+    <p>real weddings · real emotions</p>
+  </div>
+  <div class="insta-grid">
+    <iframe src="https://www.instagram.com/p/DKb5M3lyiy-/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DKb43fKyj9E/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DSupDE3kuEl/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DSmfmOTEhPX/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DRC9LwnEozy/embed"></iframe>
+    <iframe src="https://www.instagram.com/p/DQl_df-Et2d/embed"></iframe>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Client Love</h2>
+  </div>
+  <div class="reviews">
+    <div class="review"><h3>Amit & Neha</h3><p>"SRJ didn’t just capture our wedding, they captured emotions. Pure class."</p></div>
+    <div class="review"><h3>Rohit & Anjali</h3><p>"Cinematic, elegant and premium. Our families loved every frame."</p></div>
+    <div class="review"><h3>Saurav & Pooja</h3><p>"Worth every rupee. Looks like a Netflix wedding film."</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Watch Our Film</h2>
+    <p>a glimpse into our cinematic storytelling</p>
+  </div>
+  <div class="video-box">
+    <iframe src="https://www.youtube.com/embed/CjjQ83Q3Lws" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div style="text-align:center;margin-top:50px">
+    <a href="https://wa.me/7488573305?text=Hi%20SRJ%20Photography%2C%20we%20want%20to%20reserve%20our%20wedding%20date.%20Please%20share%20details." style="display:inline-block;padding:18px 36px;border:2px solid var(--gold);border-radius:50px;color:var(--gold);font-family:'Cinzel',serif;letter-spacing:2px">RESERVE YOUR DATE</a>
+  </div>
+</section>
+
+<section id="enquiry">
+  <div class="section-title">
+    <h2>Wedding Enquiry</h2>
+    <p>tell us about your celebration</p>
+  </div>
+  <div style="max-width:900px;margin:auto;background:#111;border:1px solid rgba(201,162,77,.25);padding:50px;border-radius:24px">
+    <form onsubmit="event.preventDefault();window.location.href='https://wa.me/7488573305?text='+encodeURIComponent('Hi SRJ Photography, I would like to enquire about my wedding.
+Name: '+this.name.value+'
+Wedding Date: '+this.date.value+'
+Location: '+this.location.value+'
+Event Type: '+this.event.value);">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px">
+        <input name="name" placeholder="Your Name" required style="padding:16px;background:#000;border:1px solid rgba(201,162,77,.4);color:#fff;border-radius:12px">
+        <input name="date" placeholder="Wedding Date" required style="padding:16px;background:#000;border:1px solid rgba(201,162,77,.4);color:#fff;border-radius:12px">
+        <input name="location" placeholder="Wedding Location" required style="padding:16px;background:#000;border:1px solid rgba(201,162,77,.4);color:#fff;border-radius:12px">
+        <input name="event" placeholder="Event Type (Wedding / Pre-Wedding)" required style="padding:16px;background:#000;border:1px solid rgba(201,162,77,.4);color:#fff;border-radius:12px">
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <button type="submit" style="padding:18px 50px;border:none;border-radius:60px;background:var(--gold);color:#000;font-family:'Cinzel',serif;letter-spacing:2px;font-size:16px">SEND ENQUIRY</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>SRJ Photography</h3>
+      <p>We believe every wedding deserves to be captured with elegance, emotion and cinematic excellence. Your story, crafted forever.</p>
+    </div>
+    <div>
+      <h3>Enquiry</h3>
+      <p>Have a wedding coming up?<br>Dates are limited.</p>
+      <p><a href="https://wa.me/7488573305?text=Hi%20SRJ%20Photography%2C%20I%20want%20to%20check%20availability%20and%20reserve%20my%20wedding%20date.">📲 Reserve Your Date</a></p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>📞 7488573305<br>📞 9113464075<br>📍 Patna · Destination Weddings</p>
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <p><a href="https://www.instagram.com/weddingsbysrj/">Instagram</a><br><a href="https://youtube.com/@weddingsbysrjpatna190">YouTube</a></p>
+    </div>
+  </div>
+  <div class="copyright">© 2026 SRJ Photography Patna · All Rights Reserved</div>
+</footer>
+
+</body>
+</html>
